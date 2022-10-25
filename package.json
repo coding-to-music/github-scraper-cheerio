@@ -1,12 +1,13 @@
 {
-  "name": "github-scraper",
+  "name": "github-scraper-cheerio",
   "version": "7.0.1",
-  "description": "insert imaginative description here",
+  "description": "🕷 🕸 crawl GitHub web pages for insights we can't GET from the API ... 💡",
   "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon test/followers.js",
     "start": "live-server --open=./examples",
     "quick": "./node_modules/tape/bin/tape ./test/*.js",
+    "deploy": "git add . && git commit -m Build && git push",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js | node_modules/tap-spec/bin/cmd.js",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --lines 100 --branches 100"
   },
